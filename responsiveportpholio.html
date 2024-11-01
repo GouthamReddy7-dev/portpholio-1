@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portpholio website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        html{
+            scroll-behavior: smooth;
+            background-color: #161821;
+        }
+        #nav{
+            width: 1250px;
+            height: 60px;
+            border: 2px solid black;
+            background-color: black;
+            transform: translateY(-8px);
+
+            
+        }
+        #nav ul{
+            display: flex;
+            list-style-type: none;
+            justify-content: flex-end;
+           
+            
+        }
+        #nav ul li{
+            padding: 0 12px;
+        }
+        #nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: ease-in-out 0.4s;
+        }
+        #rest img{
+            width: 300px;
+            height: 270px;
+            margin-top: 150px;
+            margin-left: 140px;
+            border: 2px solid black;
+            border-radius: 50%;
+            animation-name: sidetop;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+        }
+        #topright{
+            width: 680px;
+            height: 371px;
+            float: right;
+            transform: translateY(-370px);
+        }
+       
+        #some{
+            color: rgb(255 0 0 / 86%);
+            text-shadow: 0px 0px 6px red;
+        }
+        #nav ul li a:hover{
+            color: rgb(255 0 0 / 86%);
+        }
+        #topright h3{
+            text-wrap: balance;
+            transform: translateY(-10px);
+            animation-name: sideleft;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            color: white;
+        }
+        #hireme button{
+            width: 120px;
+            height: 40px;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            transform: translateY(-10px);
+            cursor: pointer;
+            transition: ease-in-out 0.8s;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            animation-name: sideright;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+        }
+        #hireme button:hover{
+            background-color: rgb(255 0 0 / 86%);
+            color: black;
+        }
+        @keyframes sideleft{
+            from{
+                transform: translatex(300px);
+            }
+            to{
+                transform: translatex(0);
+            }
+        }
+        @keyframes sideright{
+            from{
+                transform: translatex(-300px);
+            }
+            to{
+                transform: translatex(0);
+            }
+        }
+        @keyframes sidetop{
+            from{
+                transform: translateY(-250px);
+            }
+            to{
+                transform: translateY(0);
+            }
+        }
+        #topright h1{
+            font-size:50px;
+            text-shadow: 0px 0px 6px white;
+            font-family:Arial, Helvetica, sans-serif;
+            animation-name: sideleft;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+
+        }
+        .material-symbols-outlined{
+            animation-name: sideleft;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            
+        }
+        #rest img{
+            transition: ease-in-out 0.6s;
+        }
+        #rest img:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+            
+        }
+        #projects{
+            width: 1246px;
+            height: 500px;
+            /*border: 2px solid black;*/
+            display: flex;
+            justify-content: space-evenly;
+            transform: translateY(-225px);
+        }
+        #card{
+            height: 233px;
+            width: 200px;
+            border: 2px solid black;
+            background-color: black;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0px 0px 20px rgb(255 0 0 / 86%) ;
+        }
+        
+        #innercard{
+            height: 233px;
+            width: 200px;
+            border: 2px solid red;
+            background-color: rgb(255 0 0 / 86%);
+            border-radius: 20px;
+            transform: translateY(151px);
+            transition: ease-in-out 0.4s;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+        #innercard:hover{
+            transform: translateY(50px);
+        }
+        #card img{
+            width: 50px;
+            height: 50px;
+        }
+        #card1{
+            height: 233px;
+            width: 200px;
+            border: 2px solid black;
+            background-color: black;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 0px 20px rgb(212, 9, 0);
+        }
+        #card2{
+            height: 233px;
+            width: 200px;
+            border: 2px solid black;
+            background-color: black;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 0px 20px rgb(255 0 0 / 86%);
+        }
+        #card1 img{
+            width: 90px;
+            height: 50px;
+        }
+        #card2 img{
+            width: 50px;
+            height: 50px;
+        }
+        #mypro{
+            width: 415px;
+            height: 225px;
+            
+        }
+        #mypro h1{
+            font-size: 60px;
+            text-wrap: balance;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #exps{
+            width: 1246px;
+            height: 580px;
+            transform: translateY(-280px);
+            background-color: #161821;
+        }
+        #cardexp{
+            height: 233px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 20px;
+            margin-top: 170px;
+            background: transparent;
+            backdrop-filter: blur(8px);
+        }
+        #exps h1{
+            /*-webkit-text-stroke: 3px red;*/
+            animation-name: textcolor;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-duration: 6s;
+            color: #161821;
+            text-shadow:3px 5px 15px black;
+            
+        }
+        @keyframes textcolor{
+            0%{
+                -webkit-text-stroke: 3px #161821;
+            }
+            25%{
+                -webkit-text-stroke: 3px azure;
+            }
+            50%{
+                -webkit-text-stroke: 3px azure;
+            }
+            75%{
+                -webkit-text-stroke: 3px #161821;
+            }
+            100%{
+                -webkit-text-stroke: 3px #161821;
+            }
+        }
+        #incards{
+            width: 1246px;
+            height: 400px;
+            display:flex;
+            justify-content: space-evenly;
+            
+        }
+        #cardd{
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            border-radius: 10px;
+           /* box-shadow: 5px 5px 5px hsl(0,0%, 0%, 80%);*/
+           position: relative;
+           background-color: #1c1f2b;
+
+        }
+        @property --angle{
+            syntax: "<angle>";
+                initial-value: 0deg;
+                inherits: false;
+        }
+        #cardd::after,#cardd::before{
+            content: '';
+            position:absolute;
+            height: 100%;
+            width: 100%;
+            background-image: conic-gradient(from var(--angle),rgb(212, 9, 0),rgb(255, 110, 0),rgb(255, 200, 0),rgb(212, 9, 0));/* #ff4545,#00ff99,#006aff,#ff0099,#ff4545  ||| transparent 70%,red  ||| rgb(212, 9, 0),rgb(255, 110, 0),rgb(255, 200, 0),rgb(212, 9, 0)*/
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            z-index: -1;
+            padding: 3px;
+            border-radius: 10px;
+            animation: 3s spin linear infinite;
+
+        }
+        @keyframes spin{
+            from{
+                --angle:0deg;
+
+            }
+            to{
+                --angle:360deg;
+
+            }
+        }
+        #cardd::before{
+            filter: blur(1.5rem);
+            opacity: 0.5;
+        }
+        #cardd ul li{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            list-style-type: none;
+            
+        }
+        #final{
+            width: 1246px;
+            height: 500px;
+            border: 2px solid black;
+            animation-name: bodyclr;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            transform: translateY(-90px);
+        }
+        @keyframes bodyclr{
+            0%{
+                background-color: #F8E16C;
+            }
+            25%{
+                background-color: #FB8F67;
+            }
+            50%{
+                background-color: #CAFF8A;
+            }
+            75%{
+                background-color: #FA6CA6;
+            }
+            100%{
+                background-color: #649FF5;
+            }
+        }
+        @media (max-width: 768px) {
+    #nav {
+        width: 100%;
+        height: auto;
+    }
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    #nav ul li {
+        padding: 10px 0;
+    }
+    #rest img {
+        width: 200px;
+        height: 200px;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    #topright {
+        float: none;
+        text-align: center;
+        transform: translateY(0);
+    }
+    #topright h1 {
+        font-size: 30px;
+    }
+    #topright h3 {
+        font-size: 16px;
+    }
+    #projects {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+    #card, #card1, #card2 {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    #card img {
+        width: 60px;
+        height: 60px;
+    }
+    #exps h1 {
+        font-size: 30px;
+        margin-left: 0;
+    }
+    #incards {
+        flex-direction: column;
+        align-items: center;
+    }
+    #cardd {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    #final h1 {
+        font-size: 24px;
+        padding-top: 100px;
+    }
+}
+
+        
+        
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="#topright">HOME</a></li>
+            <li><a href="#projects">ABOUT US</a></li>
+            <li><a href="#">CONTACT US</a></li>
+            <li><a href="#exps">PROJECTS</a></li>
+        </ul>
+    </div>
+
+    <div id="rest">
+        <img src="cartoon.jpg" alt="avatar">
+    </div>
+    <div id="topright">
+        <h1 style="color: white;">WELCOME <span id="some">TO</span> MY <span id="some">PORTFOLIO</span> WEBSITE</h1>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim, molestias voluptatum sapiente consequatur illo ex ipsum culpa porro voluptatem iste illum perspiciatis magnam accusantium quis pariatur esse, reiciendis ea?</h3>
+        <span class="material-symbols-outlined" style="font-size: 35px;padding: 0 10px;"><a href="#" style="text-decoration: none;color: rgb(255 0 0 / 86%);">mail</a></span>
+        <span class="material-symbols-outlined" style="font-size: 35px;padding: 0 10px;"><a href="#"  style="text-decoration: none;color: white;">call</a></span>
+        <span class="material-symbols-outlined" style="font-size: 35px;padding: 0 10px;"><a href="#" style="text-decoration: none;color: rgb(255 0 0 / 86%);">chat</a></span>
+        <span id="hireme"><button style="box-shadow: 0px 0px 20px rgb(212, 9, 0);">HIRE ME</button></span>
+    </div>
+    <div id="projects">
+        <div id="mypro">
+            <h1 style="color: white;"><span style="color: rgb(255 0 0 / 86%) ;font-family: Arial, Helvetica, sans-serif;">MY SKILLS</span> & EXPERIANCE</h1>
+        </div>
+        <div id="card">
+            <img src="pyton.jpg" alt="python">
+            <br>
+            <div id="innercard" style="color: white;">PYTHON WITH
+                <br>
+                <ul>
+                    <li>Django</li>
+                    <li>ML</li>
+                    <li>MY SQL</li>
+                </ul>
+                <P>EXPERIANCE: 1 YEAR</P>
+            </div>
+        </div>
+        <div id="card1">
+            <img src="html5.jpg" alt="html">
+            <div id="innercard" style="color: white;">FRONT END WITH
+                <br>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVA SCRIPT</li>
+                </ul>
+                <P>EXPERIANCE: 1 YEAR</P>
+            </div>
+        </div>
+        <div id="card2">
+            <img src="clang.jpg" alt="c language">
+            <div id="innercard" style="color: white;">C WITH
+                <br>
+                <ul>
+                    <li>LINKED LIST</li>
+                    <li>STACK</li>
+                    <li>QUEUE</li>
+                </ul>
+                <P>EXPERIANCE: 2 YEAR</P>
+            </div>
+        </div>
+    </div>
+    <div id="exps">
+        <h1 style="font-size: 60px;font-family: Arial, Helvetica, sans-serif;margin-left: 481PX;">PROJECTS</h1>
+        <br>
+        <div id="incards">
+            <div id="cardd">
+                <h2 style="color: white;margin-left: 55px;font-family: Arial, Helvetica, sans-serif;">MACHINE LEARNING</h2>
+                <br>
+                <ul>
+                    <li>Weather Classification</li>
+                    <br>
+                    <li>Employee salary increment predection</li>
+                    <br>
+                    <li>Cyber bullying Classification with NLTK</li>
+                    <br>
+                    <li>Health care</li>
+                    <br>
+                    <li>Customer Churn Classification</li>
+
+                </ul>
+
+            </div>
+            <div id="cardd">
+                <h2 style="color: white;margin-left: 115px;font-family: Arial, Helvetica, sans-serif;">FRONT END</h2>
+                <br>
+                <ul>
+                    <li>Portfolio website</li>
+                    <br>
+                    <li>Simple shoping cart </li>
+                    <br>
+                    <li>Modren Login Form</li>
+                    <br>
+                    <li>Glass Morphism</li>
+                    <br>
+                    <li>Animated backgrounds</li>
+
+                </ul>
+
+            </div>
+            <div id="cardd">
+                <h2 style="color: white;margin-left: 145px;font-family: Arial, Helvetica, sans-serif;">PYTHON</h2>
+                <br>
+                <ul>
+                    <li>Qr Code Generator </li>
+                    <br>
+                    <li>Text TO Speach</li>
+                    <br>
+                    <li>Speach Recognization</li>
+                    <br>
+                    <li>Assistant</li>
+                    <br>
+                    <li>WhatsApp Message bombing with pyautogui </li>
+
+                </ul>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div id="final">
+        <h1 style="font-family: Arial, Helvetica, sans-serif;display: flex;justify-content: center;padding-top: 200px;">THANKYOU FOR VISITING MY PAGE</h1>
+
+    </div>
+</body>
+</html>
